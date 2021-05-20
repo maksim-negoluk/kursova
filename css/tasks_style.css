@@ -1,0 +1,81 @@
+.font {
+	font-family: 'Courier Prime', monospace;
+}
+
+.wrapper {
+	max-width: 1920px;
+}
+
+.main_block {
+		display: flex;
+}
+
+.day_sorting_block {
+	display: flex;
+	min-height: 800px;
+	width: 15%;
+	background-color: #B3D1EE;
+}
+
+.sort_list {
+	margin: 20px 0px 0px 10%;
+}
+
+.sort_title {
+	margin: 0px;
+}
+
+ul{
+	margin: 8px;
+	padding-inline-start: 20px;
+}
+
+.sort_element {
+ margin: 0px;
+}
+
+.table_block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 85%;
+	min-height: 600px;
+	height: 800px;
+	max-height: 800px;
+	background-color: #C4C4C4;
+}
+
+.table {
+	height: 90%;
+	width: 90%;
+	background-color: #F6F6F6;
+}
+
+.table_title_block {
+	display: flex;
+	height: 10%;
+}
+
+.table_column_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 33%;
+	border: 2px solid black;
+}
+
+.table_title {
+	font-size: 24px;
+}
+
+.table_elements_block {
+	display: flex;
+	height: 90%;
+}
+
+.table_element {
+	display: flex;
+	justify-content: center;
+	flex-basis: 33%;
+	border: 2px solid black;
+}
