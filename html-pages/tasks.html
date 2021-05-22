@@ -32,9 +32,18 @@
 						<div class="table_column_title"><span class="font table_title">Виконано</span></div>
 					</div>
 					<div class="table_elements_block">
-						<div class="table_element"></div>
-						<div class="table_element"></div>
-						<div class="table_element"></div>
+						<div class="table_element" id="planning">
+							<div class="task_block"></div>
+							<div class="plus" onclick="addTaskToPlanning()"></div>
+						</div>
+						<div class="table_element" id="inProgres">
+							<div class="task_block"></div>
+							<div class="plus" onclick="addTaskToInProgres()"></div>
+						</div>
+						<div class="table_element" id="done">
+							<div class="task_block"></div>
+							<div class="plus" onclick="addTaskToDone()"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -42,6 +51,7 @@
 		<footer>
 			
 		</footer>
+		<script type="text/javascript" src="../js/dynamic_table.js"></script>
 	</div>
 </body>
 </html>

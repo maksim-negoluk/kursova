@@ -71,11 +71,55 @@ ul{
 .table_elements_block {
 	display: flex;
 	height: 90%;
+	text-align: center;
 }
 
 .table_element {
-	display: flex;
-	justify-content: center;
-	flex-basis: 33%;
+	width: 33.33%;
+	display: block;
 	border: 2px solid black;
+	padding-top: 3%;
+	overflow-y: auto;
+}
+
+.task_block {
+	height: 25%;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 20%;
+	border: 2px solid black;
+}
+
+.plus {
+   width: 50px;
+   height: 50px;
+   position: relative;
+   margin: 0 auto;
+}
+
+.plus:before, .plus:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background: #000000;
+}
+
+.plus:before {
+  left: 50%;
+  width: 10%;
+  margin-left: -5%;
+  height: 100%;
+}
+
+.plus:after {
+  top: 50%;
+  left: 0%;
+  height: 10%;
+  margin-top: -5%;
+  width: 100%;
+}
+
+.plus:hover {
+	width: 54px;
+	height: 54px;
 }
