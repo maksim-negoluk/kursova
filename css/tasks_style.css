@@ -1,3 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+
+*,*:before,*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+:focus,:active {
+  outline: none;
+}
+
+a:focus,a:active {
+  outline: none;
+}
+
+
+nav,footer,header,aside {
+  display: block;
+}
+
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+input,button,textarea {
+  font-family: inherit;
+}
+
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
 .font {
 	font-family: 'Courier Prime', monospace;
 }
@@ -15,6 +100,7 @@
 	min-height: 800px;
 	width: 15%;
 	background-color: #B3D1EE;
+	padding-top: 1.5%;
 }
 
 .sort_list {
@@ -23,6 +109,7 @@
 
 .sort_title {
 	margin: 0px;
+	font-size: 24px;
 }
 
 ul{
@@ -31,7 +118,8 @@ ul{
 }
 
 .sort_element {
- margin: 0px;
+	margin: 0px;
+	font-size: 18px;
 }
 
 .table_block {
@@ -60,7 +148,7 @@ ul{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-basis: 33%;
+	flex-basis: 33.34%;
 	border: 2px solid black;
 }
 
@@ -71,23 +159,52 @@ ul{
 .table_elements_block {
 	display: flex;
 	height: 90%;
-	text-align: center;
 }
 
 .table_element {
-	width: 33.33%;
+	width: 33.34%;
 	display: block;
 	border: 2px solid black;
 	padding-top: 3%;
+	padding-bottom: 3%;
 	overflow-y: auto;
 }
 
 .task_block {
 	height: 25%;
 	width: 90%;
-	margin: 0 auto;
-	margin-bottom: 20%;
+	margin: 0 auto 20%;
+	padding: 5%;
 	border: 2px solid black;
+}
+
+.task_block_top_part {
+	height: 30%;
+}
+
+.task_block_title {
+	width: 80%;
+	float: left;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.task_block_bottom_part {
+	margin-top: 3%;
+	height: 70%;
+}
+
+.task_block_text {
+	font-size: 16px;
+	width: 80%;
+	float: left;
+}
+
+.detail_button_block {
+	display: flex;
+	height: 100%;
+	align-items: flex-start;
+	transform: rotate(180deg);
 }
 
 .plus {
@@ -122,4 +239,25 @@ ul{
 .plus:hover {
 	width: 54px;
 	height: 54px;
+}
+
+.delete_button {
+	height: 25px;
+	width: 25px;
+	float: right;
+	transform: rotate(45deg);
+}
+
+.delete_button:hover {
+	height: 27px;
+	width: 27px;
+}
+
+.details_button {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid #000000;
+	border-bottom: 10px solid transparent;
+	transform: rotate(180deg);
 }

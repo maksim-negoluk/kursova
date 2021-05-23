@@ -15,7 +15,7 @@
 		</header>
 		<div class="main_block">
 			<div class="day_sorting_block">
-				<div class="sort_list">
+				<div class="sort_list font">
 					<h3 class="sort_title">Задачі на:</h3>
 					<ul class="sort elements">
 						<li class="sort_element">День</li>
@@ -33,17 +33,26 @@
 					</div>
 					<div class="table_elements_block">
 						<div class="table_element" id="planning">
-							<div class="task_block"></div>
 							<div class="plus" onclick="addTaskToPlanning()"></div>
 						</div>
 						<div class="table_element" id="inProgres">
-							<div class="task_block"></div>
 							<div class="plus" onclick="addTaskToInProgres()"></div>
 						</div>
 						<div class="table_element" id="done">
-							<div class="task_block"></div>
-							<div class="plus" onclick="addTaskToDone()"></div>
+							<div class="task_block">
+								<div class="task_block_top_part">
+									<p class="task_block_title font">To do something</p>
+									<div class="plus delete_button" onclick="deleteTask()"></div>
+								</div>
+								<div class="task_block_bottom_part">
+									<p class="task_block_text font">I have to do something, or not. Ok I will play minecraft anyway</p>
+									<div class="detail_button_block">
+										<div class="details_button">
+									</div>
+								</div>
+							</div>
 						</div>
+						<div class="plus" onclick="addTaskToDone()"></div>
 					</div>
 				</div>
 			</div>
