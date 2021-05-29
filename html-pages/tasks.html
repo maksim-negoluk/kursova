@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/tasks_style.css">
+	
 </head>
 <body>
 	<div class="wrapper">
@@ -41,7 +42,23 @@
 						<div class="table_element" id="done">
 							<div class="task_block">
 								<div class="task_block_top_part">
-									<p class="task_block_title font">To do something</p>
+									<p class="task_block_title font"><a href="#eclipse">To do something</a></p>
+									<div id="eclipse">
+      									<div id="window">
+	   									 <form class="form">
+   <div class="form_group">
+   	name your task<br>
+    <input type="" name="" class="form_input" placeholder=" ">
+    <label class="form_label">name your task</label>
+   </div>
+   <div class="form_group">
+   <label class="form_label_large"><div class="message_settings">commentaries</div>
+   <textarea class="form_input_large" rows="10" ></textarea></label>
+   </div>
+  </form>
+	    									<a href="#" class="close">close</a>
+      									</div>
+    								</div>
 									<div class="plus delete_button" onclick="deleteTask()"></div>
 								</div>
 								<div class="task_block_bottom_part">
