@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+
+*,*:before,*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+:focus,:active {
+  outline: none;
+}
+
+a:focus,a:active {
+  outline: none;
+}
+
+
+nav,footer,header,aside {
+  display: block;
+}
+
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+input,button,textarea {
+  font-family: inherit;
+}
+
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.font {
+  font-family: 'Courier Prime', monospace;
+}
+
+.wrapper {
+  max-width: 1920px;
+}
+
+.container {
+   display: flex;
+   width: 100%;
+   height: 760px;
+   align-items: center;
+   justify-content: center;
+   background-color: #F6F6F6
+}
+
+.login_block {
+   display: flex;
+   width: 30%;
+   height: 30%;
+   background-color: #C4C4C4;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid #484747;
+   border-radius: 40px;
+}
+
+.login_form_block {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+}
+
+.login_block_title {
+   margin: 8% 5% 3% 5%;
+   text-align: center;
+   font-size: 28px;
+}
+
+.form {
+   width: 90%;
+}
+
+.form_input {
+   display: inline-block;
+   float: right;
+   width: 80%;
+   height: 18px;
+   border: 1px solid #484747;
+   border-radius: 8px;
+   padding-left: 2%;
+   margin-left: -5%;
+}
+
+.submit_button_block {
+   margin: 4% 0%;
+   display: flex;
+   justify-content: center;
+
+}
+
+.submit_button {
+   width: 20%;
+   height: 20px;
+   border: 1px solid #484747;
+   border-radius: 8px;
+}
+
+.login_text {
+   display: inline-block;
+   float: left;
+   font-size: 14px;
+}
+
+.login_table_element {
+   width: 95%;
+   height: 30px;
+   margin-top: 20px;
+}
