@@ -7,6 +7,7 @@ if($connection == false){
     exit();
 }
 
+    $section_id = 1;
     $title = $_POST['title'];
     $description = $_POST['description'];
     $task_date = $_POST['task_date'];
@@ -17,6 +18,6 @@ if($connection == false){
         $is_important = 0;
     }
 
-    $insertion = mysqli_query($connection, "INSERT INTO `task_blocks` (`Розділ_id`, `Заголовок`, `Опис`, `Дата виконання`, `Є важливим`) VALUES (1, '$title', '$description', '$task_date', '$is_important')");
+    $insertion = mysqli_query($connection, "INSERT INTO `task_blocks` (`Розділ_id`, `Заголовок`, `Опис`, `Дата виконання`, `Є важливим`) VALUES ('$section_id', '$title', '$description', '$task_date', '$is_important')");
 
     header('Location: /html-pages/tasks.php');
