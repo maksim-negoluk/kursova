@@ -1,0 +1,21 @@
+{
+  "name": "package.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "c",
+  "scripts": {
+    "test": "c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "c"
+  },
+  "keywords": [
+    "c"
+  ],
+  "author": "c",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
