@@ -31,32 +31,31 @@ if($connection == false){
                     <div class="header-title">Logo</div>
                 </div>
                 <div class="header-nav">
-                    <a class="header-nav__link" href="../index.php">Головна</a>
-                    <a class="header-nav__link" href="tasks.php">Задачі</a>
-                    <a class="header-nav__link" href="#">Статистика</a>
-                    <a class="header-nav__link" href="login.html">Вхід</a>
+                    <a class="header-nav__link" href="../index.php">Main page</a>
+                    <a class="header-nav__link" href="tasks.php">Tasks</a>
+                    <a class="header-nav__link" href="#">Notifications</a>
+                    <a class="header-nav__link" href="login.html">Exit</a>
                 </div>
             </div>
         </div>
     </header>
     <div class="main_block">
-
         <div class="day_sorting_block">
             <div class="sort_list font">
-                <h3 class="sort_title">Задачі на:</h3>
+                <h3 class="sort_title">Tasks for:</h3>
                 <ul class="sort elements">
-                    <li class="sort_element">День</li>
-                    <li class="sort_element">Тиждень</li>
-                    <li class="sort_element">Місяць</li>
+                    <li class="sort_element">Day</li>
+                    <li class="sort_element">Week</li>
+                    <li class="sort_element">Month</li>
                 </ul>
             </div>
         </div>
         <div class="table_block">
             <div class="table">
                 <div class="table_title_block">
-                    <div class="table_column_title"><span class="font table_title">Планується</span></div>
-                    <div class="table_column_title"><span class="font table_title">В процесі</span></div>
-                    <div class="table_column_title"><span class="font table_title">Виконано</span></div>
+                    <div class="table_column_title"><span class="font table_title">Planning</span></div>
+                    <div class="table_column_title"><span class="font table_title">In progress</span></div>
+                    <div class="table_column_title"><span class="font table_title">Done</span></div>
                 </div>
                 <div class="table_elements_block" >
                     <div class="table_element" id="Planning">
@@ -157,11 +156,11 @@ if($connection == false){
     <div id="eclipse">
         <div id="window">
             <form class="form font" method="POST" action="add.php">
-                <div class="form_group"> <p class="form_text">Назва задачі:</p>
+                <div class="form_group"> <p class="form_text">Task name:</p>
                     <input type="text" name="title" class="form_input" placeholder=" ">
                 </div>
                 <div class="form_group">
-                    <label class="form_label_large"><div class="message_settings"><p class="form_text">Детальніше:</p></div>
+                    <label class="form_label_large"><div class="message_settings"><p class="form_text">Detailed:</p></div>
                         <textarea class="form_input_large" rows="10" name="description"></textarea></label>
                 </div>
                 <div class="selection_block">
@@ -169,7 +168,7 @@ if($connection == false){
                         <input type="date" class="date_input" name="task_date">
                     </div>
                     <input type="checkbox" class="important_option" name="is_important_option" value="important">
-                    <p class="font">Важливо</p>
+                    <p class="font">important</p>
                 </div>
                 <br>
                 <div class="submit_block">
@@ -177,7 +176,7 @@ if($connection == false){
                 </div>
             </form>
             <div class="close_button_block">
-                <a href="tasks.php" class="close font">Закрити</a>
+                <a href="tasks.php" class="close font">Close</a>
             </div>
         </div>
     </div>

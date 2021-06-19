@@ -18,10 +18,10 @@
                 <div class="header-title">Logo</div>
             </div>
             <div class="header-nav">
-                <a class="header-nav__link" href="#">Головна</a>
-                <a class="header-nav__link" href="html-pages/tasks.php">Задачі</a>
-                <a class="header-nav__link" href="#">Статистика</a>
-                <a class="header-nav__link" href="html-pages/login.html">Вхід</a>
+                <a class="header-nav__link" href="index.php">Main page</a>
+                <a class="header-nav__link" href="html-pages/tasks.php">Tasks</a>
+                <a class="header-nav__link" href="#">Notifications</a>
+                <a class="header-nav__link" href="html-pages/login.html">Exit</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
 <section class="upper-content">
     <div class="container">
         <div class="main-picture">
-            <img src="img/people.jpg" alt="picture">
+            <img src="img/manstairs.jpg" alt="picture">
         </div>
     </div>
 </section>
@@ -72,7 +72,7 @@
     <div class="container">
         <div class="block-button">
             <div class="block-button__title"></div>
-            <button class="custom_button">Спробувати</button>
+            <button class="custom_button">Try</button>
             <div class="block-button__custom-button"></div>
         </div>
     </div>
