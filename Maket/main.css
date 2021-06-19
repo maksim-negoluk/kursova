@@ -77,7 +77,9 @@ img{
 .main-block__title{
     text-align:center;
     font-size: 120px; 
-    font-family: 'Courier Prime', monospace;
+font-family: 'Courier Prime', monospace;
+   /*font-family: 'Luminary', fantasy;*/
+ /*font-family: 'Marker Felt', fantasy;*/
     padding-bottom:3%;
 
 }
