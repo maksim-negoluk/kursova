@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +16,23 @@
         <div class="header-inner">
             <div class="header-item">
                 <div class="header-logo">
-                    <img src="img/Notepad_Icon.png" alt="">
+                    <img src="img/note.png" alt="" class="logo_picture">
                 </div>
-                <div class="header-title">Logo</div>
+                <div class="header-title">Reminder</div>
             </div>
             <div class="header-nav">
                 <a class="header-nav__link" href="index.php">Main page</a>
                 <a class="header-nav__link" href="html-pages/tasks.php">Tasks</a>
-                <a class="header-nav__link" href="#">Notifications</a>
-                <a class="header-nav__link" href="html-pages/login.html">Exit</a>
+                <a class="header-nav__link" href="html-pages/notifications.php">Notifications</a>
+                <?if ($_SESSION['user']){
+                    $message = 'Exit';
+                    $link = 'html-pages/exit.php';
+                }
+                else{
+                    $message = 'Login';
+                    $link = 'html-pages/signIn_page.php';
+                }?>
+                <a class="header-nav__link" href="<?= $link ?>"><span><?= $message ?></span></a>
             </div>
         </div>
     </div>
@@ -72,7 +83,7 @@
     <div class="container">
         <div class="block-button">
             <div class="block-button__title"></div>
-            <button class="custom_button">Try</button>
+            <button class="custom_button" href="html-pages/signUp_page.php">Try</button>
             <div class="block-button__custom-button"></div>
         </div>
     </div>

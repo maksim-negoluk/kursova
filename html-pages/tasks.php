@@ -8,6 +8,10 @@ if($connection == false){
     exit();
 }
 
+session_start();
+
+$user_id = $_SESSION['user']['user_id'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +37,18 @@ if($connection == false){
                 <div class="header-nav">
                     <a class="header-nav__link" href="../index.php">Main page</a>
                     <a class="header-nav__link" href="tasks.php">Tasks</a>
-                    <a class="header-nav__link" href="#">Notifications</a>
-                    <a class="header-nav__link" href="login.html">Exit</a>
+                    <a class="header-nav__link" href="notifications.php">Notifications</a>
+                    <?
+                    if ($_SESSION['user']){
+                        $message = 'Exit';
+                        $link = 'exit.php';
+                    }
+                    else{
+                        $message = 'Login';
+                        $link = 'signIn_page.php';
+                    }
+                    ?>
+                    <a class="header-nav__link" href="<?= $link ?>"><span><?= $message ?></span></a>
                 </div>
             </div>
         </div>
@@ -60,14 +74,13 @@ if($connection == false){
                 <div class="table_elements_block" >
                     <div class="table_element" id="Planning">
                         <?php
-
-                        $task_block_planning = mysqli_query($connection, "SELECT * FROM `task_blocks` WHERE `Розділ_id` = 1");
+                        $task_block_planning = mysqli_query($connection, "SELECT * FROM `task_blocks` WHERE `Розділ_id` = 1 AND `user_id` = '$user_id'");
                         $task_block_planning = mysqli_fetch_all($task_block_planning);
                         foreach ($task_block_planning as $task) {
                             ?>
                             <div class="task_block">
                                 <div class="task_block_top_part">
-                                    <p class="task_block_title font"><a href="http://kursova.com/html-pages/tasks.php?task-date=&submit_button=Отправить#eclipse" class="creation_window_link"><?= $task[2] ?></a></p>
+                                    <p class="task_block_title font"><a href="redact_page.php?id=<?= $task[0] ?>" class="creation_window_link"><?= $task[2] ?></a></p>
                                     <div class="delete_button_block">
                                         <a class="delete_link" href="delete.php?id=<?= $task[0] ?>"><div class="plus delete_button" onclick="deleteTask()"></div></a>
                                     </div>
@@ -92,13 +105,13 @@ if($connection == false){
                     <div class="table_element" id="InProgress">
                         <?php
 
-                        $task_block_InProgress = mysqli_query($connection, "SELECT * FROM `task_blocks` WHERE `Розділ_id` = 2");
+                        $task_block_InProgress = mysqli_query($connection, "SELECT * FROM `task_blocks` WHERE `Розділ_id` = 2 AND `user_id` = '$user_id'");
                         $task_block_InProgress = mysqli_fetch_all($task_block_InProgress);
                         foreach ($task_block_InProgress as $task) {
                             ?>
                             <div class="task_block">
                                 <div class="task_block_top_part">
-                                    <p class="task_block_title font"><a href="http://kursova.com/html-pages/tasks.php?task-date=&submit_button=Отправить#eclipse" class="creation_window_link"><?= $task[2] ?></a></p>
+                                    <p class="task_block_title font"><a href="redact_page.php?id=<?= $task[0] ?>" class="creation_window_link"><?= $task[2] ?></a></p>
                                     <div class="delete_button_block">
                                         <a class="delete_link" href="delete.php?id=<?= $task[0] ?>"><div class="plus delete_button" onclick="deleteTask();"></div></a>
                                     </div>
@@ -123,13 +136,13 @@ if($connection == false){
                     <div class="table_element" id="done">
                         <?php
 
-                        $task_block_done = mysqli_query($connection, "SELECT * FROM `task_blocks` WHERE `Розділ_id` = 3");
+                        $task_block_done = mysqli_query($connection, "SELECT * FROM `task_blocks` WHERE `Розділ_id` = 3 AND `user_id` = '$user_id'");
                         $task_block_done = mysqli_fetch_all($task_block_done);
                         foreach ($task_block_done as $task) {
                         ?>
                         <div class="task_block">
                             <div class="task_block_top_part">
-                                <p class="task_block_title font"><a href="http://kursova.com/html-pages/tasks.php?task-date=&submit_button=Отправить#eclipse" class="creation_window_link"><?= $task[2] ?></a></p>
+                                <p class="task_block_title font"><a href="redact_page.php?id=<?= $task[0] ?>" class="creation_window_link"><?= $task[2] ?></a></p>
                                 <div class="delete_button_block">
                                     <a class="delete_link" href="delete.php?id=<?= $task[0] ?>"><div class="plus delete_button" onclick="deleteTask();"></div></a>
                                 </div>
@@ -172,12 +185,12 @@ if($connection == false){
                 </div>
                 <br>
                 <div class="submit_block">
-                    <input type="submit" name="submit_button" value="Відправити" class="submit_button">
+                    <input type="submit" name="submit_button" value="Send" class="submit_button">
+                </div>
+                <div class="close_button_block">
+                    <a href="tasks.php" class="close font">Close</a>
                 </div>
             </form>
-            <div class="close_button_block">
-                <a href="tasks.php" class="close font">Close</a>
-            </div>
         </div>
     </div>
     </div>
